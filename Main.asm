@@ -75,7 +75,7 @@ Start		LD R0, ASCIIBar
 		ADD R3, R3, #1
 		BR LOOP
 
-FSM2		ADD R3, R3, #3
+FSM2		ADD R3, R3, #3 ; start of FSM2 finding the end codon
 		LD R5, ASCIIU
 		LD R6, Num32
 
