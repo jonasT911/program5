@@ -30,7 +30,7 @@ LOOP		LDI R4, Offset4600A
 		STI R5, Offset4600A
 
 ; start of FSM
-FSM		ADD R3, R3, #-3
+FSM		ADD R3, R3, #-3 ; this is checking for the start codon
 		BRZP FSM2
 		ADD R3, R3, #3
 		LD R5, ASCIIA
