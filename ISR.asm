@@ -1,6 +1,6 @@
 ; ISR.asm
-; Name: RYAN KROGFOSS
-; UTEid: RK25457
+; Name: RYAN KROGFOSS and Jonas Traweek
+; UTEid: RK25457 and JTT2279
 ; Keyboard ISR runs when a key is struck
 ; Checks for a valid RNA symbol and places it at x4600
                .ORIG x2600
@@ -33,12 +33,12 @@
 		ADD R3, R3, #-14		
 		BRZ InputChar			; ACCOUNT FOR LOWER CASE A,C,U,G
 
-		BRNZP EndISR
+		BRNZP EndISR			;return to main code
 
 InputChar	LD R3, Offset4600		; LOAD ADDRESS INTO R3
 		STR R1, R3, 0			; STORE Character AT X4600
 		
-		LD R0, blkwR0
+		LD R0, blkwR0			;Restore destroyed registers
 		LD R1, blkwR1
 		LD R2, blkwR2
 		LD R3, blkwR3
