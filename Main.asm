@@ -1,6 +1,6 @@
 ; Main.asm
-; Name: RYAN KROGFOSS
-; UTEid: RK25457 
+; Name: RYAN KROGFOSS and Jonas Traweek
+; UTEid: RK25457 and JTT2279
 ; Continuously reads from x4600 making sure its not reading duplicate
 ; symbols. Processes the symbol based on the program description
 ; of mRNA processing.
